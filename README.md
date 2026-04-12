@@ -173,6 +173,8 @@ app, and test it out! You should have a similarly functioning Timer app as shown
 **Hint**: If you comment out this line of code, run the app, and press the "Reset" button under different conditions 
 what do you see? 
 
+[Answer Here]
+
 ## Submission:
 
 ZIP your `CSC213LAB8\src\main` folder and submit it along with your README.md to the corresponding D2L dropbox.  
