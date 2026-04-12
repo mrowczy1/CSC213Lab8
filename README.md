@@ -175,6 +175,8 @@ what do you see?
 
 ## Submission:
 
+ZIP your `CSC213LAB8\src\main` folder and submit it along with your README.md to the corresponding D2L dropbox.  
+
 
 
 
