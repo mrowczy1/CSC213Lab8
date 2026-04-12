@@ -60,11 +60,7 @@ We're going to need the power of Gradle to help us run JavaFX applications. Open
 on the elephant in the right sidebar and navigate to `CSC213LAB8 -> Tasks -> application`. Double-click the "run" 
 Gradle Task and a window similar to below should pop up:
 
-<div style="text-align: center;">
-
 ![Figure 1](/images/timer1.png)
-
-</div>
 
 This is our Timer app!
 
@@ -115,30 +111,18 @@ Why do you only need to change this one line of code? Rather, asked differently.
 Run the timer app again and check to ensure that repeated "Start"s and "Stop"s don't cause our timer to behave
 strangely. You should have something that works like so (ignoring the GIF video quality/FPS drop):
 
-<div style="text-align: center;">
-
 ![Video 1](/videos/timer.gif)
-
-</div>
 
 ## 3. [FXML](https://docs.oracle.com/javase/8/javafx/api/javafx/fxml/doc-files/introduction_to_fxml.html)
 
 While we fixed our app by implementing code in our business logic layer, we could have instead changed the UI! The 
 problem with the UI is that we present "Start" **and** "Stop" buttons. What if we presented only one at a time? Like so:
 
-<div style="text-align: center;">
-
 ![Figure 2](/images/toggle-timer.png)
-
-</div>
 
 And then after "Start" has been pressed, it starts the timer and the button's text switches to "Stop":
 
-<div style="text-align: center;">
-
 ![Figure 3](/images/toggle-timer-stop.png)
-
-</div>
 
 such that when "Stop" is pressed, it stops the timer and switches the button's text back to "Start". In essence, we
 replace the 2 "Start" and "Stop" Buttons with 1 Toggle Button.
@@ -182,11 +166,7 @@ Now, we can fix the red text by
 Finally, change the loaded FXML file in `TimerAppLauncher` from `timer.fxml` to `toggle-timer.fxml`, rerun the 
 app, and test it out! You should have a similarly functioning Timer app as shown below:
 
-<div style="text-align: center;">
-
 ![Video 2](/videos/toggle-timer.gif)
-
-</div>
 
 ### Bonus (3pts): What is the purpose of `scheduledRunnable.run()` in the `handleReset` method?
 
