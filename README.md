@@ -34,7 +34,7 @@ stop and not an averaged elapsed time between starts and stops.
 
 ### Q1: Even though `Timer`'s fields are protected, is encapsulation still used?
 
-[Answer Here]
+[Yes. Even with protected fields, the data is still hidden from the rest of the application. It just allows classes in the same package or subclasses to see them, while keeping everyone else out.]
 
 ## 2. [JavaFX](https://openjfx.io/)
 
@@ -44,7 +44,7 @@ it to our business logic layer (our application code) through what JavaFX calls 
 
 ### Q2: What layer would "Controllers" fall into based on the info above?
 
-[Answer Here]
+[The coordination layer]
 
 Open `TimerAppLauncher`. This class serves as our entry point to our JavaFX application, which is identifiable
 because `TimerAppLauncher` `extends`...well...`javafx.application.Application`! We will soon run this class, but notice 
@@ -52,7 +52,7 @@ that it is missing something that's been present in all of our previous runnable
 
 ### Q3: What is this missing piece in `TimerAppLauncher`?
 
-[Answer Here]
+[The main method. Usually, every Java program needs one to start running.
 
 ## 2.1 Running a JavaFX Application
 
@@ -88,7 +88,7 @@ Since `Timer` is part of our business logic layer and `RobustTimer` is an extens
 
 ### Q4: What package should `RobustTimer` be placed in?
 
-[Answer Here]
+[The businesslogic package.]
 
 Usually we should write tests to help us test our code. Here, we will just test it manually through the timer app.
 
@@ -106,7 +106,7 @@ Why do you only need to change this one line of code? Rather, asked differently.
 
 **Hint:** It is not inheritance.
 
-[Answer Here]
+[Polymorphism. It allows us to use a RobustTimer object anywhere the code expects a regular Timer.]
 
 Run the timer app again and check to ensure that repeated "Start"s and "Stop"s don't cause our timer to behave
 strangely. You should have something that works like so (ignoring the GIF video quality/FPS drop):
@@ -144,7 +144,7 @@ Now, we can fix the red text by
 
 ### Q6: What package should `ToggleTimerController` be placed in?
 
-[Answer Here]
+[The controllers package.]
 
 `ToggleTimerController` should:
 
@@ -161,7 +161,7 @@ Now, we can fix the red text by
 
 ### Q7 (2pts): Does it matter which `Timer` object is used in step 3 above and why?
 
-[Answer Here]
+[No. Because we are using a ToggleButton, the user is physically forced to alternate between Start and Stop. They can't click "Start" twice in a row, so the bugs we fixed in RobustTimer can't even happen here.]
 
 Finally, change the loaded FXML file in `TimerAppLauncher` from `timer.fxml` to `toggle-timer.fxml`, rerun the 
 app, and test it out! You should have a similarly functioning Timer app as shown below:
@@ -173,7 +173,7 @@ app, and test it out! You should have a similarly functioning Timer app as shown
 **Hint**: If you comment out this line of code, run the app, and press the "Reset" button under different conditions 
 what do you see? 
 
-[Answer Here]
+[It makes the timer on the screen change to "00:00.0" immediately.
 
 ## Submission:
 
