@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 public class TimerAppLauncher extends Application {
 	
 	@Override public void start(final Stage primaryStage) throws Exception {
-		// Set up the primary stage (Window) before showing it to the user.
+		// Set up the primary Stage (Window) before showing it to the user.
 		primaryStage.setTitle("Timer");
 		
 		// Load the presentation layer.
@@ -22,7 +22,7 @@ public class TimerAppLauncher extends Application {
 		primaryStage.setScene(loader.load());
 		final TimerController controller = loader.getController();
 		// Need to ensure that our spawned thread gets properly terminated.
-		primaryStage.setOnCloseRequest(windowEvent -> controller.shutdown());
+		primaryStage.setOnCloseRequest(_ -> controller.shutdown());
 		
 		// Once everything is set up, show the window!
 		primaryStage.show();

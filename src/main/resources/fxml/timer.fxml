@@ -8,14 +8,12 @@
 <?import javafx.scene.text.Text?>
 <Scene xmlns:fx="http://javafx.com/fxml" xmlns="http://javafx.com/javafx"
        fx:controller="controllers.TimerController">
-	<GridPane alignment="CENTER" hgap="15" vgap="15">
-		<padding>
-			<Insets topRightBottomLeft="15"/>
-		</padding>
-		<fx:define>
-			<Font fx:id="mediumFont" size="20"/>
-			<Font fx:id="largeFont" size="32"/>
-		</fx:define>
+	<fx:define>
+		<Insets fx:id="insets" topRightBottomLeft="15"/>
+		<Font fx:id="mediumFont" size="20"/>
+		<Font fx:id="largeFont" size="32"/>
+	</fx:define>
+	<GridPane alignment="CENTER" hgap="15" vgap="15" padding="$insets">
 		<Text fx:id="duration" text="00:00.0" textAlignment="CENTER" font="$largeFont" GridPane.columnSpan="3"
 		      GridPane.rowIndex="0" GridPane.columnIndex="0" GridPane.halignment="CENTER"/>
 		<Button text="Start" onAction="#handleStart" font="$mediumFont" GridPane.rowIndex="1" GridPane.columnIndex="0"/>

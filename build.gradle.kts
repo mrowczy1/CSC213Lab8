@@ -1,11 +1,11 @@
 plugins {
     // This is a Java project...
-    id("java")
+    java
     /*
         We have a bit more going on in this project (i.e. launching the JavaFX platform) so we need Gradle to run the
          project, instead of Intellij. Therefore, we have to tell Gradle that this is an application it can run.
     */
-    id("application")
+    application
     // We are going to use a Gradle plugin to help us utilize and manage JavaFX in our project.
     id("org.openjfx.javafxplugin") version "0.1.0"
 }
@@ -14,7 +14,7 @@ plugins {
 repositories.mavenCentral()
 
 // Should explicitly specify the Java version that we are using to match the JavaFX version.
-java.toolchain.languageVersion.set(JavaLanguageVersion.of(21))
+java.toolchain.languageVersion.set(JavaLanguageVersion.of(25))
 
  // Need to state the fully-qualified name of the class for Gradle to run.
 application.mainClass = "TimerAppLauncher"
@@ -27,7 +27,7 @@ application.mainClass = "TimerAppLauncher"
 
  */
 javafx {
-    version = "21.0.2"
+    version = "25.0.2"
     modules = listOf("javafx.controls", "javafx.fxml")
 }
 
